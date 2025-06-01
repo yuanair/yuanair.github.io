@@ -4,11 +4,21 @@ body {
     color: #ffffff
 }
 
+a:link, a:visited {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+a:hover {
+    color: #007bff;
+}
+
+.container {
+    aspect-ratio: 9/16;
+}
 
 .header {
-    height: 30%;
     text-align: center;
-    aspect-ratio: 9/16;
 }
 
 .avatar {
@@ -21,3 +31,10 @@ body {
 .name {
     font-size: min(20px, 17vw);
 }
+
+.my-project-card {
+    border-radius: 10px;
+    margin: auto;
+
+}
+
