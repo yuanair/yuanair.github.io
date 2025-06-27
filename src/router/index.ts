@@ -1,21 +1,12 @@
-import {createRouter, createWebHashHistory} from 'vue-router';
-import Home from '../views/Home.vue';
-import Game_ER from '../views/Game-Error_Reboot.vue';
-import i18n from '../i18n';
+import {createRouter, createWebHashHistory, type RouteRecordRaw} from 'vue-router';
 
-const routes = [
-    {path: '/', name: 'Home', component: Home},
-    {path: '/error-reboot', name: 'Game_ER', component: Game_ER}
+const routes: RouteRecordRaw[] = [
+    {path: '/', name: 'Home', component: () => import('../views/Home.vue')},
+    {path: '/error-reboot', name: 'Error_Reboot', component: () => import('../views/Game-Error_Reboot.vue')}
 ];
 
 const router = createRouter({
-    history: createWebHashHistory(),
+    history: createWebHashHistory(import.meta.env.BASE_URL),
     routes
 });
-
-router.afterEach((_) => {
-    const titleKey = 'app.title';
-    document.title = i18n.global.t(titleKey);
-});
-
 export default router;

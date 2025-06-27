@@ -50,6 +50,13 @@
   gap: 8px;
 }
 
+.avatar {
+  border-radius: 50%;
+  box-sizing: content-box;
+  height: 100px;
+  user-select: none;
+}
+
 .child {
   display: grid;
   grid-template-columns: 1fr auto;
