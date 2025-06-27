@@ -1,8 +1,10 @@
 import {createRouter, createWebHashHistory, type RouteRecordRaw} from 'vue-router';
+import Home from "./views/Home.vue";
+import Game_Error_Reboot from "./views/Game-Error_Reboot.vue";
 
 const routes: RouteRecordRaw[] = [
-    {path: '/', name: 'Home', component: () => import('./views/Home.vue')},
-    {path: '/error-reboot', name: 'Error_Reboot', component: () => import('./views/Game-Error_Reboot.vue')}
+    {path: '/', name: 'Home', component: Home},
+    {path: '/error-reboot', name: 'Error_Reboot', component: Game_Error_Reboot}
 ];
 
 const router = createRouter({
