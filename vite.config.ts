@@ -3,9 +3,6 @@ import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
     plugins: [vue()],
-    base: './',
-    build: {
-        outDir: './dist',
-        assetsDir: './assets'
-    }
+    base: '/yuanair.github.io/',
+    build: {outDir: 'dist'}
 });
